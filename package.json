@@ -1,0 +1,26 @@
+{
+  "name": "hot-server-rollup-poc",
+  "version": "1.0.0",
+  "description": "Proof of concept for hot reloading with ES module support.",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier {*.*,**/*.*} --single-quote --write",
+    "start": "cp index.html build; concurrently \"rollup -c -w\" \"cd build; hot-server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curran/hot-server-rollup-poc.git"
+  },
+  "author": "Curran Kelleher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/curran/hot-server-rollup-poc/issues"
+  },
+  "homepage": "https://github.com/curran/hot-server-rollup-poc#readme",
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "hot-server": "^0.0.26",
+    "prettier": "^2.7.1",
+    "rollup": "^2.79.0"
+  }
+}
