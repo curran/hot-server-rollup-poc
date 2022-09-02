@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prettier": "prettier {*.*,**/*.*} --single-quote --write",
-    "start": "cp index.html build; concurrently \"rollup -c -w\" \"cd build; hot-server\""
+    "build": "rollup -c && cp index.html build",
+    "watch": "rollup -c -w",
+    "start": "npm run build; concurrently \"npm run watch\" \"cd build; hot-server\""
   },
   "repository": {
     "type": "git",
